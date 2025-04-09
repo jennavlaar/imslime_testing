@@ -2,29 +2,40 @@ import http from 'k6/http';
 import { check, sleep } from 'k6';
 import { SharedArray } from 'k6/data';
 
-export let options = {
-  stages: [
-    { duration: '10s', target: 10 },
-    { duration: '20s', target: 10 },
-    { duration: '10s', target: 0 },
-  ],
-};
+// ===== Test configuration =====
+const userCount = __ENV.USER_COUNT ? parseInt(__ENV.USER_COUNT) : 10;
+const rampUp = __ENV.RAMP_UP === 'true'; // true for gradual ramp-up
+const scenario = __ENV.SCENARIO || 'login'; // 'login' or 'full'
+const dataFile = __ENV.USER_DATA_FILE;
 
-// Get dataset filename from environment variable
-const fileName = __ENV.USER_DATA_FILE;
-
-if (!fileName) {
-  throw new Error("Please set the USER_DATA_FILE environment variable, e.g., USER_DATA_FILE=50_percent_registered.json");
+if (!dataFile) {
+  throw new Error("Set USER_DATA_FILE env variable (e.g., USER_DATA_FILE=50_percent_registered.json)");
 }
 
+export let options = {
+  stages: rampUp
+    ? [
+        { duration: `${userCount / 5 * 10}s`, target: userCount },
+        { duration: '20s', target: userCount },
+        { duration: '10s', target: 0 },
+      ]
+    : [
+        { duration: '5s', target: userCount },
+        { duration: '20s', target: userCount },
+        { duration: '10s', target: 0 },
+      ],
+};
+
+// ===== Load user data =====
 const users = new SharedArray('users', function () {
-  return JSON.parse(open(`./data/${fileName}`));
+  return JSON.parse(open(`./data/${dataFile}`));
 });
 
 function getUser() {
   return users[Math.floor(Math.random() * users.length)];
 }
 
+// ===== Main Test =====
 export default function () {
   const user = getUser();
 
@@ -35,7 +46,6 @@ export default function () {
 
   const loginHeaders = { 'Content-Type': 'application/json' };
 
-  // Attempt to login
   const loginRes = http.post('https://imslime.onrender.com/api/login', loginPayload, {
     headers: loginHeaders,
   });
@@ -44,17 +54,19 @@ export default function () {
     'Login request returned 200': (res) => res.status === 200,
   });
 
-  const authToken = loginRes.json('token');
+  if (scenario === 'full') {
+    const authToken = loginRes.json('token');
 
-  const authHeaders = {
-    Authorization: `Bearer ${authToken}`,
-  };
+    const authHeaders = {
+      Authorization: `Bearer ${authToken}`,
+    };
 
-  const playRes = http.post('https://imslime.onrender.com/api/game', {}, { headers: authHeaders });
+    const playRes = http.post('https://imslime.onrender.com/api/game', {}, { headers: authHeaders });
 
-  check(playRes, {
-    'Play request returned 200': (res) => res.status === 200,
-  });
+    check(playRes, {
+      'Play request returned 200': (res) => res.status === 200,
+    });
+  }
 
   sleep(1);
 }
