@@ -1,0 +1,51 @@
+[
+    {
+        "email": "jenna@slime.com",
+        "password": "slime123"
+    },
+    {
+        "email": "user2@example.com",
+        "password": "securepassword456"
+    },
+    {
+        "email": "user3@example.com",
+        "password": "mypassword789"
+    },
+    {
+        "email": "user4@example.com",
+        "password": "testpassword101"
+    },
+    {
+        "email": "user5@example.com",
+        "password": "examplepassword112"
+    },
+    {
+        "email": "user6@example.com",
+        "password": "securepassword4446"
+    },
+    {
+        "email": "lucy@blobmail.com",
+        "password": "blobby88pass"
+    },
+    {
+        "email": "rickroller@surprise.io",
+        "password": "neverGonnaGiveUUp"
+    },
+    {
+        "email": "phoenix@firemail.org",
+        "password": "rebornPass777"
+    },
+    {
+        "email": "devtest10@tryout.com",
+        "password": "tryAgain1010"
+    },
+    {
+        "email": "guy@email.com",
+        "password": "ponyrainbow"
+    },
+    {
+        "email": "letsgo@dinos.com",
+        "password": "pass123word"
+    }
+  ]
+  

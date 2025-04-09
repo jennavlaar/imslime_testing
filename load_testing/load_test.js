@@ -10,8 +10,15 @@ export let options = {
   ],
 };
 
+// Get dataset filename from environment variable
+const fileName = __ENV.USER_DATA_FILE;
+
+if (!fileName) {
+  throw new Error("Please set the USER_DATA_FILE environment variable, e.g., USER_DATA_FILE=50_percent_registered.json");
+}
+
 const users = new SharedArray('users', function () {
-  return JSON.parse(open('./users.json'));
+  return JSON.parse(open(`./data/${fileName}`));
 });
 
 function getUser() {
@@ -19,35 +26,34 @@ function getUser() {
 }
 
 export default function () {
-  let user = getUser();
+  const user = getUser();
 
-  let loginPayload = JSON.stringify({
+  const loginPayload = JSON.stringify({
     email: user.email,
     password: user.password,
   });
 
-  let loginHeaders = { 'Content-Type': 'application/json' };
+  const loginHeaders = { 'Content-Type': 'application/json' };
 
-  // Perform login request
-  let loginRes = http.post('https://imslime.onrender.com/#/Login', loginPayload, {
+  // Attempt to login
+  const loginRes = http.post('https://imslime.onrender.com/api/login', loginPayload, {
     headers: loginHeaders,
-    redirect: 'follow',
   });
 
   check(loginRes, {
-    'Login successful': (res) => res.status === 200,
+    'Login request returned 200': (res) => res.status === 200,
   });
 
-  let authToken = loginRes.json('token');
+  const authToken = loginRes.json('token');
 
-  let authHeaders = {
-    'Authorization': `Bearer ${authToken}`,
+  const authHeaders = {
+    Authorization: `Bearer ${authToken}`,
   };
 
-  let playRes = http.post('https://imslime.onrender.com/#/game', {}, { headers: authHeaders });
+  const playRes = http.post('https://imslime.onrender.com/api/game', {}, { headers: authHeaders });
 
   check(playRes, {
-    'Play button triggered successfully': (res) => res.status === 200,
+    'Play request returned 200': (res) => res.status === 200,
   });
 
   sleep(1);

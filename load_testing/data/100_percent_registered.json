@@ -38,6 +38,14 @@
     {
       "email": "user10@example.com",
       "password": "examplepassword69"
+    },
+    {
+      "email": "user11@example.com",
+      "password": "passwordimusing"
+    },
+    {
+      "email": "user12@example.com",
+      "password": "thefinalpassword"
     }
   ]
   

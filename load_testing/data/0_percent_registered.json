@@ -1,0 +1,51 @@
+[
+    {
+      "email": "alex@slime.com",
+      "password": "greenSlime321"
+    },
+    {
+      "email": "gamer1@example.com",
+      "password": "powerpass987"
+    },
+    {
+      "email": "testuser3@example.com",
+      "password": "letmein456"
+    },
+    {
+      "email": "samuel@playzone.com",
+      "password": "zoneAccess999"
+    },
+    {
+      "email": "elena@glitch.net",
+      "password": "gl1tchyp@ss"
+    },
+    {
+      "email": "mark42@slimearena.com",
+      "password": "arenaPass2025"
+    },
+    {
+      "email": "lucy@blobmail.com",
+      "password": "blobby88pass"
+    },
+    {
+      "email": "rickroller@surprise.io",
+      "password": "neverGonnaGiveUUp"
+    },
+    {
+      "email": "phoenix@firemail.org",
+      "password": "rebornPass777"
+    },
+    {
+      "email": "devtest10@tryout.com",
+      "password": "tryAgain1010"
+    },
+    {
+      "email": "guy@email.com",
+      "password": "ponyrainbow"
+    },
+    {
+      "email": "letsgo@dinos.com",
+      "password": "pass123word"
+    }
+  ]
+  
