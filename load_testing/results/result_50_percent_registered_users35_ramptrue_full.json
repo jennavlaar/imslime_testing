@@ -1,0 +1,150 @@
+{
+    "root_group": {
+        "groups": {},
+        "checks": {
+                "Login request returned 200": {
+                    "name": "Login request returned 200",
+                    "path": "::Login request returned 200",
+                    "id": "572a92ec029029b4b9c772e6bd54fb50",
+                    "passes": 1892,
+                    "fails": 0
+                },
+                "Play request returned 200": {
+                    "name": "Play request returned 200",
+                    "path": "::Play request returned 200",
+                    "id": "81a35480d3fa4312b9306d0c2c265fcb",
+                    "passes": 1892,
+                    "fails": 0
+                }
+            },
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "metrics": {
+        "http_req_connecting": {
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.19493395877378436,
+            "min": 0,
+            "med": 0,
+            "max": 26.6856
+        },
+        "vus_max": {
+            "value": 35,
+            "min": 35,
+            "max": 35
+        },
+        "data_sent": {
+            "count": 390037,
+            "rate": 3867.480819352837
+        },
+        "http_req_blocked": {
+            "avg": 0.4987937103594081,
+            "min": 0,
+            "med": 0,
+            "max": 82.313,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "data_received": {
+            "count": 385090,
+            "rate": 3818.427966384174
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 3784,
+            "value": 0
+        },
+        "http_reqs": {
+            "count": 3784,
+            "rate": 37.520920888098146
+        },
+        "http_req_tls_handshaking": {
+            "med": 0,
+            "max": 49.1124,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.29891434989429183,
+            "min": 0
+        },
+        "checks": {
+            "passes": 3784,
+            "fails": 0,
+            "value": 1
+        },
+        "iterations": {
+            "rate": 18.760460444049073,
+            "count": 1892
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 65.78798000000002,
+            "p(95)": 73.5633,
+            "avg": 61.47868403805478,
+            "min": 39.447,
+            "med": 51.2273,
+            "max": 4311.8804
+        },
+        "http_req_sending": {
+            "p(95)": 0.191985,
+            "avg": 0.04335816596194507,
+            "min": 0,
+            "med": 0,
+            "max": 1.7432,
+            "p(90)": 0.11927000000000003
+        },
+        "http_req_receiving": {
+            "p(90)": 0,
+            "p(95)": 0.23208499999999999,
+            "avg": 0.03774701374207188,
+            "min": 0,
+            "med": 0,
+            "max": 1.4656
+        },
+        "login_duration": {
+            "avg": 63.55687563424941,
+            "min": 39.447,
+            "med": 51.25735,
+            "max": 4311.8804,
+            "p(90)": 66.26303,
+            "p(95)": 73.41875499999999
+        },
+        "play_duration": {
+            "avg": 59.40049244186043,
+            "min": 40.0998,
+            "med": 51.144800000000004,
+            "max": 3137.2598,
+            "p(90)": 64.78693,
+            "p(95)": 73.66948499999997
+        },
+        "vus": {
+            "value": 3,
+            "min": 1,
+            "max": 35
+        },
+        "http_req_waiting": {
+            "avg": 61.39757885835095,
+            "min": 39.447,
+            "med": 51.14195,
+            "max": 4311.8804,
+            "p(90)": 65.73801,
+            "p(95)": 73.51076499999999
+        },
+        "iteration_duration": {
+            "max": 5366.4702,
+            "p(90)": 1132.6570800000002,
+            "p(95)": 1147.85033,
+            "avg": 1124.6330665961955,
+            "min": 1082.3702,
+            "med": 1104.3218499999998
+        },
+        "http_req_duration": {
+            "avg": 61.47868403805478,
+            "min": 39.447,
+            "med": 51.2273,
+            "max": 4311.8804,
+            "p(90)": 65.78798000000002,
+            "p(95)": 73.5633
+        }
+    }
+}

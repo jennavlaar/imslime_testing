@@ -1,0 +1,150 @@
+{
+    "metrics": {
+        "http_req_tls_handshaking": {
+            "max": 51.894,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.6572906249999999,
+            "min": 0,
+            "med": 0
+        },
+        "play_duration": {
+            "max": 116.0927,
+            "p(90)": 66.15065,
+            "p(95)": 74.39427500000001,
+            "avg": 54.10735156249998,
+            "min": 40.304,
+            "med": 51.897800000000004
+        },
+        "http_req_blocked": {
+            "avg": 1.0863626953124998,
+            "min": 0,
+            "med": 0,
+            "max": 87.7757,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "iterations": {
+            "rate": 7.107392306286142,
+            "count": 256
+        },
+        "vus_max": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "data_received": {
+            "rate": 1909.2510215273114,
+            "count": 68769
+        },
+        "http_req_duration": {
+            "max": 145.9109,
+            "p(90)": 66.32197000000002,
+            "p(95)": 73.87622999999999,
+            "avg": 54.13269316406252,
+            "min": 40.304,
+            "med": 51.42695
+        },
+        "http_req_connecting": {
+            "min": 0,
+            "med": 0,
+            "max": 21.767,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.3903771484375
+        },
+        "iteration_duration": {
+            "avg": 1111.1367867187507,
+            "min": 1087.1534,
+            "med": 1104.8465999999999,
+            "max": 1217.1375,
+            "p(90)": 1137.4778999999999,
+            "p(95)": 1156.3132249999999
+        },
+        "checks": {
+            "passes": 512,
+            "fails": 0,
+            "value": 1
+        },
+        "data_sent": {
+            "rate": 1546.3575651387716,
+            "count": 55698
+        },
+        "http_req_waiting": {
+            "p(95)": 73.81902999999998,
+            "avg": 54.054731054687544,
+            "min": 40.304,
+            "med": 51.3056,
+            "max": 145.9109,
+            "p(90)": 65.88730000000001
+        },
+        "http_req_sending": {
+            "avg": 0.041508593749999996,
+            "min": 0,
+            "med": 0,
+            "max": 1.276,
+            "p(90)": 0.11836000000000002,
+            "p(95)": 0.18773999999999996
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 10
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 66.32197000000002,
+            "p(95)": 73.87622999999999,
+            "avg": 54.13269316406252,
+            "min": 40.304,
+            "med": 51.42695,
+            "max": 145.9109
+        },
+        "http_req_receiving": {
+            "p(90)": 0,
+            "p(95)": 0.04855499999999877,
+            "avg": 0.036453515625,
+            "min": 0,
+            "med": 0,
+            "max": 1.0222
+        },
+        "login_duration": {
+            "p(95)": 73.178325,
+            "avg": 54.158034765625004,
+            "min": 40.8666,
+            "med": 51.25815,
+            "max": 145.9109,
+            "p(90)": 65.8794
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 512,
+            "value": 0
+        },
+        "http_reqs": {
+            "count": 512,
+            "rate": 14.214784612572284
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "Login request returned 200": {
+                    "id": "572a92ec029029b4b9c772e6bd54fb50",
+                    "passes": 256,
+                    "fails": 0,
+                    "name": "Login request returned 200",
+                    "path": "::Login request returned 200"
+                },
+                "Play request returned 200": {
+                    "name": "Play request returned 200",
+                    "path": "::Play request returned 200",
+                    "id": "81a35480d3fa4312b9306d0c2c265fcb",
+                    "passes": 256,
+                    "fails": 0
+                }
+            }
+    }
+}

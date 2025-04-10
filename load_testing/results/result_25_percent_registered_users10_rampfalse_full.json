@@ -1,0 +1,150 @@
+{
+    "metrics": {
+        "login_duration": {
+            "p(95)": 73.5128,
+            "avg": 53.716644488189,
+            "min": 39.4365,
+            "med": 50.8225,
+            "max": 92.674,
+            "p(90)": 65.45593000000001
+        },
+        "http_reqs": {
+            "count": 508,
+            "rate": 14.320113485659048
+        },
+        "http_req_blocked": {
+            "avg": 1.1320478346456693,
+            "min": 0,
+            "med": 0,
+            "max": 88.0443,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "iterations": {
+            "count": 254,
+            "rate": 7.160056742829524
+        },
+        "http_req_connecting": {
+            "avg": 0.4115275590551181,
+            "min": 0,
+            "med": 0,
+            "max": 22.6252,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "iteration_duration": {
+            "avg": 1119.9341633858276,
+            "min": 1083.8244,
+            "med": 1103.9773500000001,
+            "max": 3230.0079,
+            "p(90)": 1137.8814399999999,
+            "p(95)": 1155.149365
+        },
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 51.5502,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.6921986220472441
+        },
+        "http_req_sending": {
+            "p(90)": 0.16629,
+            "p(95)": 0.20555999999999994,
+            "avg": 0.05695984251968504,
+            "min": 0,
+            "med": 0,
+            "max": 1.0382
+        },
+        "play_duration": {
+            "avg": 63.24925078740151,
+            "min": 39.1427,
+            "med": 49.788399999999996,
+            "max": 2145.403,
+            "p(90)": 66.64169,
+            "p(95)": 75.96887499999998
+        },
+        "checks": {
+            "passes": 508,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_duration": {
+            "max": 2145.403,
+            "p(90)": 66.44005,
+            "p(95)": 74.47326,
+            "avg": 58.48294763779529,
+            "min": 39.1427,
+            "med": 50.215149999999994
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 508,
+            "value": 0
+        },
+        "vus_max": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "data_sent": {
+            "count": 55354,
+            "rate": 1560.3849643408878
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 58.48294763779529,
+            "min": 39.1427,
+            "med": 50.215149999999994,
+            "max": 2145.403,
+            "p(90)": 66.44005,
+            "p(95)": 74.47326
+        },
+        "http_req_receiving": {
+            "avg": 0.03254724409448819,
+            "min": 0,
+            "med": 0,
+            "max": 1.0241,
+            "p(90)": 0,
+            "p(95)": 0.18635499999999858
+        },
+        "http_req_waiting": {
+            "med": 50.1445,
+            "max": 2145.403,
+            "p(90)": 66.03280000000001,
+            "p(95)": 74.24727499999999,
+            "avg": 58.39344055118112,
+            "min": 39.1427
+        },
+        "vus": {
+            "min": 1,
+            "max": 10,
+            "value": 1
+        },
+        "data_received": {
+            "count": 67851,
+            "rate": 1912.6653939280554
+        }
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "Login request returned 200": {
+                    "fails": 0,
+                    "name": "Login request returned 200",
+                    "path": "::Login request returned 200",
+                    "id": "572a92ec029029b4b9c772e6bd54fb50",
+                    "passes": 254
+                },
+                "Play request returned 200": {
+                    "name": "Play request returned 200",
+                    "path": "::Play request returned 200",
+                    "id": "81a35480d3fa4312b9306d0c2c265fcb",
+                    "passes": 254,
+                    "fails": 0
+                }
+            },
+        "name": "",
+        "path": ""
+    }
+}

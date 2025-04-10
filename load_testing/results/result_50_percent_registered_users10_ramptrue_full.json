@@ -1,0 +1,150 @@
+{
+    "metrics": {
+        "http_req_duration{expected_response:true}": {
+            "max": 5334.4759,
+            "p(90)": 72.23268999999999,
+            "p(95)": 80.77647999999998,
+            "avg": 87.02665800653592,
+            "min": 40.2764,
+            "med": 51.5516
+        },
+        "data_sent": {
+            "rate": 1287.8659907274669,
+            "count": 65629
+        },
+        "login_duration": {
+            "max": 3149.002,
+            "p(90)": 71.189,
+            "p(95)": 82.487875,
+            "avg": 73.01392745098033,
+            "min": 40.5213,
+            "med": 51.697900000000004
+        },
+        "http_req_duration": {
+            "p(90)": 72.23268999999999,
+            "p(95)": 80.77647999999998,
+            "avg": 87.02665800653592,
+            "min": 40.2764,
+            "med": 51.5516,
+            "max": 5334.4759
+        },
+        "http_req_sending": {
+            "max": 1.0425,
+            "p(90)": 0.14456,
+            "p(95)": 0.19974499999999987,
+            "avg": 0.04907614379084968,
+            "min": 0,
+            "med": 0
+        },
+        "checks": {
+            "passes": 612,
+            "fails": 0,
+            "value": 1
+        },
+        "iterations": {
+            "count": 306,
+            "rate": 6.004769128930882
+        },
+        "http_req_tls_handshaking": {
+            "med": 0,
+            "max": 46.0793,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.5674601307189543,
+            "min": 0
+        },
+        "iteration_duration": {
+            "med": 1106.60815,
+            "max": 6389.8596,
+            "p(90)": 1145.19015,
+            "p(95)": 1174.180725,
+            "avg": 1176.6127950980394,
+            "min": 1084.1484
+        },
+        "http_req_receiving": {
+            "p(95)": 0.40407999999999955,
+            "avg": 0.05232140522875818,
+            "min": 0,
+            "med": 0,
+            "max": 1.1158,
+            "p(90)": 0
+        },
+        "vus_max": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "http_req_blocked": {
+            "med": 0,
+            "max": 87.2415,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.9657163398692811,
+            "min": 0
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 612,
+            "value": 0
+        },
+        "play_duration": {
+            "p(95)": 79.310625,
+            "avg": 101.03938856209146,
+            "min": 40.2764,
+            "med": 50.94705,
+            "max": 5334.4759,
+            "p(90)": 72.33664999999999
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 10
+        },
+        "data_received": {
+            "count": 75507,
+            "rate": 1481.706217706484
+        },
+        "http_req_connecting": {
+            "avg": 0.3669656862745098,
+            "min": 0,
+            "med": 0,
+            "max": 31.3844,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_reqs": {
+            "rate": 12.009538257861765,
+            "count": 612
+        },
+        "http_req_waiting": {
+            "avg": 86.92526045751637,
+            "min": 40.2764,
+            "med": 51.3527,
+            "max": 5334.4759,
+            "p(90)": 72.23268999999999,
+            "p(95)": 80.77647999999998
+        }
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "Login request returned 200": {
+                    "name": "Login request returned 200",
+                    "path": "::Login request returned 200",
+                    "id": "572a92ec029029b4b9c772e6bd54fb50",
+                    "passes": 306,
+                    "fails": 0
+                },
+                "Play request returned 200": {
+                    "name": "Play request returned 200",
+                    "path": "::Play request returned 200",
+                    "id": "81a35480d3fa4312b9306d0c2c265fcb",
+                    "passes": 306,
+                    "fails": 0
+                }
+            },
+        "name": "",
+        "path": ""
+    }
+}
