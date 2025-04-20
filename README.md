@@ -5,7 +5,7 @@ Testing the software performance of [I'm Slime](https://imslime.onrender.com/#/L
 
 ## Load Testing
 
-To run load testing, ensure you have k6 installed on your computer. Type **k6 run load_test.js** with the desired targetted dataset and configuration as follows:
+To run load testing, ensure you have k6 installed on your computer. Type **k6 run load_test.js** with the desired targeted dataset and configuration as follows:
 
 ```k6 run load_test.js --env USER_DATA_FILE=filename --env USER_COUNT=count --env RAMP_UP=true --env SCENARIO=login```
 
