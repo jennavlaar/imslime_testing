@@ -22,3 +22,5 @@ Example:
     k6 run load_test.js --env USER_DATA_FILE=0_percent_registered.json --env USER_COUNT=10 --env RAMP_UP=false --env SCENARIO=full
     k6 run load_test.js --env USER_DATA_FILE=25_percent_registered.json --env USER_COUNT=25 --env RAMP_UP=true --env SCENARIO=login
 ```
+
+If you would like to run all combinations, simply run the ```run_tests.bat``` script.
